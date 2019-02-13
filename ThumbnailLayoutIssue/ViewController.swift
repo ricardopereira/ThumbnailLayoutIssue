@@ -72,6 +72,7 @@ class ThumbnailTableViewCell: UITableViewCell {
         backgroundColor = .blue
 
         contentView.addSubview(thumbnailImageView)
+        backgroundColor = .red
 
         setupConstraints()
     }
@@ -92,23 +93,23 @@ class ThumbnailTableViewCell: UITableViewCell {
         #warning("If I force a fixed height then everything goes well:")
         NSLayoutConstraint.activate([
             thumbnailImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            thumbnailImageView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 95),
-            thumbnailImageView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -95),
-            //thumbnailImageView.heightAnchor.constraint(equalTo: thumbnailImageView.widthAnchor, multiplier: 138/90)
+            thumbnailImageView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 95),
+            thumbnailImageView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -95),
+            thumbnailImageView.heightAnchor.constraint(equalTo: thumbnailImageView.widthAnchor, multiplier: 138/90)
             // Height for iPhone X/XS:
-            thumbnailImageView.heightAnchor.constraint(equalToConstant: 235)
+            //thumbnailImageView.heightAnchor.constraint(equalToConstant: 235)
             ])
 
         contentView.insertSubview(stackBackgroundView, belowSubview: thumbnailBackgroundView)
         NSLayoutConstraint.activate([
             stackBackgroundView.topAnchor.constraint(equalTo: thumbnailImageView.centerYAnchor),
-            stackBackgroundView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 5),
-            stackBackgroundView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -5),
+            stackBackgroundView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 5),
+            stackBackgroundView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -5),
             stackBackgroundView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 5)
             ])
 
         let stackView = UIStackView()
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.axis = .vertical
         stackView.spacing = 5
