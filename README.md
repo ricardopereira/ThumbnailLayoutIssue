@@ -4,6 +4,8 @@
 
 More about the **solution** in [@pedrommcarrasco](https://github.com/pedrommcarrasco) StackOverflow answer: https://stackoverflow.com/a/54667649/3641812.
 
+---
+
 **Demo for issue:** _"Height is ambiguous using Readable Content Guides and flexible thumbnail"._
 
 | How things are being displayed: | How things should look like: |
