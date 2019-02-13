@@ -94,9 +94,9 @@ class ThumbnailTableViewCell: UITableViewCell {
             thumbnailImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             thumbnailImageView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 95),
             thumbnailImageView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -95),
-            thumbnailImageView.heightAnchor.constraint(equalTo: thumbnailImageView.widthAnchor, multiplier: 138/90)
+            //thumbnailImageView.heightAnchor.constraint(equalTo: thumbnailImageView.widthAnchor, multiplier: 138/90)
             // Height for iPhone X/XS:
-            //thumbnailImageView.heightAnchor.constraint(equalToConstant: 259)
+            thumbnailImageView.heightAnchor.constraint(equalToConstant: 235)
             ])
 
         contentView.insertSubview(stackBackgroundView, belowSubview: thumbnailBackgroundView)
